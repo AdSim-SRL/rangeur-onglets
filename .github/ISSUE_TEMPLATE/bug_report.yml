@@ -1,0 +1,72 @@
+name: 🐞 Signaler un bug
+description: Quelque chose ne fonctionne pas comme prévu
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler un problème. **Ne collez pas la liste de vos onglets ou favoris** : elle contient souvent des informations privées.
+        Une faille de sécurité se signale en privé : voir [SECURITY.md](https://github.com/AdSim-SRL/rangeur-onglets/blob/main/SECURITY.md).
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Fonction concernée
+      options:
+        - Regroupement des onglets
+        - Fermeture des doublons
+        - Mise en veille des groupes repliés
+        - Tri des favoris
+        - Restauration des favoris
+        - Installation / téléchargement de l'IA
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Ce qui se passe
+      description: Ce que vous avez fait, ce que vous attendiez, ce qui s'est produit.
+      placeholder: |
+        1. J'ai cliqué sur l'icône avec 40 onglets ouverts
+        2. …
+        Attendu : …
+        Obtenu : …
+    validations:
+      required: true
+  - type: input
+    id: result
+    attributes:
+      label: Ligne de résultat affichée
+      placeholder: "40 onglets : 32 rangés en 7 groupes (par site)…"
+  - type: dropdown
+    id: ai
+    attributes:
+      label: État de l'IA (badge en haut de la fenêtre)
+      options:
+        - IA locale prête
+        - IA à activer
+        - IA en téléchargement
+        - IA indisponible
+        - Je ne sais pas
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Version de Chrome et système
+      description: Visible dans chrome://version
+      placeholder: "Chrome 153.0.8010.53, macOS 26.3"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version de l'extension
+      description: Visible dans chrome://extensions
+      placeholder: "1.2.0"
+  - type: textarea
+    id: console
+    attributes:
+      label: Messages de la console
+      description: Clic droit sur l'icône → Inspecter la fenêtre → onglet Console. Copiez les lignes commençant par [Rangeur].
+      render: text

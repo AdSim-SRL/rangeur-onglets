@@ -1,0 +1,32 @@
+name: 💡 Proposer une idée
+description: Une fonction ou une amélioration qui vous serait utile
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Le problème
+      description: Quelle situation vous gêne aujourd'hui ?
+      placeholder: "Quand je travaille sur plusieurs clients, je dois…"
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: La solution imaginée
+      description: Ce que l'extension devrait faire, de votre point de vue.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives envisagées
+      description: Autres solutions ou contournements que vous utilisez.
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Principes du projet
+      description: Voir CONTRIBUTING.md
+      options:
+        - label: Mon idée ne nécessite pas d'envoyer de données hors de l'ordinateur
+        - label: Mon idée peut fonctionner, au moins en partie, sans IA
