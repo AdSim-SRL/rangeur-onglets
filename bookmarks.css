@@ -1,0 +1,22 @@
+body.page {
+  width: auto;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+  font-size: 14px;
+}
+.page h1 { font-size: 22px; }
+.page h2 { font-size: 16px; margin: 28px 0 8px; }
+.intro { color: var(--muted); margin: 8px 0 16px; }
+.page .actions { margin: 14px 0; }
+.page .actions button { flex: 0 1 auto; }
+
+.tree details { border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; }
+.tree details details { margin: 4px 10px 8px 22px; }
+.tree summary { cursor: pointer; padding: 8px 12px; display: flex; gap: 8px; align-items: baseline; }
+.tree summary .name { font-weight: 600; flex: 1; }
+.tree summary .count { color: var(--muted); font-variant-numeric: tabular-nums; }
+.tree ul { list-style: none; margin: 0; padding: 0 12px 8px 32px; }
+.tree li { padding: 3px 0; display: flex; gap: 10px; min-width: 0; }
+.tree li .title { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tree li .from { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }

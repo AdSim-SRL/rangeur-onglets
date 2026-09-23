@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Tri des favoris</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="bookmarks.css">
+</head>
+<body class="page">
+  <header>
+    <h1>Tri des favoris</h1>
+    <span id="engine" class="engine"></span>
+  </header>
+
+  <p class="intro">
+    L'IA locale lit chaque favori (titre, site, dossier actuel) et propose un classement par thème,
+    en fusionnant les dossiers en double et en corrigeant les noms. Rien n'est modifié avant que tu cliques
+    sur <strong>Appliquer</strong>, et une sauvegarde est faite juste avant, restaurable en un clic.
+  </p>
+
+  <label class="option">
+    <input type="checkbox" id="includeLoose">
+    Inclure les liens posés directement dans la barre de favoris (sinon ils ne bougent pas)
+  </label>
+
+  <div class="actions">
+    <button id="analyze" class="primary">Analyser mes favoris</button>
+  </div>
+
+  <p id="status" class="status"></p>
+  <div id="progress" class="progress" hidden><div id="bar"></div></div>
+
+  <section id="preview" hidden>
+    <h2>Classement proposé</h2>
+    <p id="summary" class="status"></p>
+    <div id="tree" class="tree"></div>
+    <div class="actions">
+      <button id="apply" class="primary">Appliquer ce classement</button>
+      <button id="reanalyze">Relancer l'analyse</button>
+    </div>
+  </section>
+
+  <section id="backup" hidden>
+    <h2>Sauvegarde</h2>
+    <p id="backupInfo" class="status"></p>
+    <div class="actions">
+      <button id="restore">Restaurer les favoris d'avant le tri</button>
+      <button id="export">Télécharger la sauvegarde (JSON)</button>
+    </div>
+  </section>
+
+  <script src="ai.js"></script>
+  <script src="bookmarks.js"></script>
+</body>
+</html>

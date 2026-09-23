@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Rangeur d'onglets",
+  "version": "1.2.0",
+  "description": "Range les onglets par projet, ferme les doublons, met en veille les groupes repliés et trie les favoris, grâce à l'IA locale de Chrome (Gemini Nano).",
+  "minimum_chrome_version": "138",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage",
+    "bookmarks"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ranger les onglets",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

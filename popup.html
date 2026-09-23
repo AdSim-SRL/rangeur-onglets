@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Rangeur d'onglets</h1>
+    <span id="engine" class="engine"></span>
+  </header>
+
+  <p id="status" class="status">Analyse des onglets…</p>
+  <div id="progress" class="progress" hidden><div id="bar"></div></div>
+
+  <ul id="groups" class="groups"></ul>
+
+  <div class="actions">
+    <button id="download" hidden>Activer l'IA locale (téléchargement unique)</button>
+    <button id="regroup" class="primary">Regrouper à nouveau</button>
+    <button id="ungroup">Tout dégrouper</button>
+  </div>
+
+  <label class="option">
+    <input type="checkbox" id="dedupe" checked>
+    Fermer les onglets en double
+  </label>
+  <label class="option">
+    <input type="checkbox" id="collapse" checked>
+    Replier les groupes sauf celui de l'onglet actif
+  </label>
+  <label class="option">
+    <input type="checkbox" id="sleep" checked>
+    Mettre en veille les groupes repliés (libère la RAM)
+  </label>
+  <label class="option">
+    <input type="checkbox" id="useAi" checked>
+    Utiliser l'IA (sinon regroupement par site)
+  </label>
+
+  <button id="bookmarks" class="secondary">Trier mes favoris…</button>
+
+  <script src="ai.js"></script>
+  <script src="heuristics.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
